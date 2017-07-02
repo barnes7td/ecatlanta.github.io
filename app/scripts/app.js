@@ -10,17 +10,17 @@
              .state('home', {
                  url: '/',
                  controller: 'HomeCtrl as home',
-                 templateUrl: '/templates/home.html'
+                 templateUrl: 'templates/home.html'
              })
              .state('schedule', {
                  url: '/schedule',
                  controller: 'ScheduleCtrl as schedule',
-                 templateUrl: '/templates/schedule.html'
+                 templateUrl: 'templates/schedule.html'
              })
              .state('admin', {
                  url: '/admin',
                  controller: 'AdminCtrl as admin',
-                 templateUrl: '/templates/admin.html'
+                 templateUrl: 'templates/admin.html'
              });
      }
      
