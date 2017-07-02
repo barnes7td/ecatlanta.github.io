@@ -8,17 +8,17 @@
  
          $stateProvider
              .state('home', {
-                 url: '/',
+                 url: '',
                  controller: 'HomeCtrl as home',
                  templateUrl: 'templates/home.html'
              })
              .state('schedule', {
-                 url: '/schedule',
+                 url: 'schedule',
                  controller: 'ScheduleCtrl as schedule',
                  templateUrl: 'templates/schedule.html'
              })
              .state('admin', {
-                 url: '/admin',
+                 url: 'admin',
                  controller: 'AdminCtrl as admin',
                  templateUrl: 'templates/admin.html'
              });
