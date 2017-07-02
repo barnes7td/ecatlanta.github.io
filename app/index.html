@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="ECAtlSite">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Bloc Base Project</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <nav class="nav">
+    <a class="nav-item" ui-sref="home">Home</a>
+    <a class="nav-item" ui-sref="schedule">Schedule</a>
+    <a class="nav-item" ui-sref="admin">Admin</a>
+  </nav>
+  <ui-view></ui-view>
+  
+  <!-- Vendor Files -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBqe8lpnqxtCpcCGcs2HL5k3waUq3NM25E",
+      authDomain: "ecatlanta2007.firebaseapp.com",
+      databaseURL: "https://ecatlanta2007.firebaseio.com",
+      projectId: "ecatlanta2007",
+      storageBucket: "ecatlanta2007.appspot.com",
+      messagingSenderId: "711403257957"
+    };
+    firebase.initializeApp(config);
+  </script>
+  
+  <!-- Application Files -->
+  <script src="/scripts/app.js"></script>
+  
+  <script src="/scripts/controllers/AdminCtrl.js"></script>
+  <script src="/scripts/controllers/HomeCtrl.js"></script>
+  <script src="/scripts/controllers/ScheduleCtrl.js"></script>
+  
+  <script src="/scripts/services/Attendee.js"></script>
+  <script src="/scripts/services/Event.js"></script>
+</body>
+</html>

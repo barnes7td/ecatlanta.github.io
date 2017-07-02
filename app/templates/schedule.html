@@ -1,0 +1,41 @@
+<h1>Schedule</h1>
+
+<ul ng-repeat="event in schedule.events">
+  <li>
+    <span class="">{{ event.name }}</span>
+    <span class="">{{ event.location }}</span>
+    <span class="">{{ event.time }}</span>
+  </li>
+</ul>  
+
+<form  class="" method="post">
+  <div class="field">
+    <label class="lable">Name</label>
+    <p class="control">
+      <input type="text" ng-model="newEvent.name">
+    </p>
+  </div>
+  
+  <div class="field">
+    <label class="lable">Location</label>
+    <p class="control">
+      <input type="text" ng-model="newEvent.location">
+    </p>
+  </div>
+  
+  <div class="field">
+    <label class="lable">Time</label>
+    <p class="control">
+      <input type="time" ng-model="newEvent.time">
+    </p>
+  </div>
+  
+  <div class="field is-grouped">
+    <p class="control">
+      <button class="button is-primary" ng-click="schedule.addEvent(newEvent)">Submit</button>
+    </p>
+    <p class="control">
+      <button class="button is-link">Cancel</button>
+    </p>
+  </div>
+</form>
