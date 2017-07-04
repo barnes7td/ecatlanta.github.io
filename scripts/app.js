@@ -12,12 +12,12 @@
                  controller: 'HomeCtrl as home',
                  templateUrl: 'templates/home.html'
              })
-             .state('schedule', {
+             .state('/schedule', {
                  url: 'schedule',
                  controller: 'ScheduleCtrl as schedule',
                  templateUrl: 'templates/schedule.html'
              })
-             .state('admin', {
+             .state('/admin', {
                  url: 'admin',
                  controller: 'AdminCtrl as admin',
                  templateUrl: 'templates/admin.html'
