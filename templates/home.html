@@ -1,5 +1,3 @@
-<h1>Home</h1>
-
 <section class="hero has-text-centered">
   <div class="hero-body">
     <div class="container ">
@@ -16,9 +14,43 @@
   </div>
 </section>
 
-<div class="block has-text-centered is-fullwidth">
-    <input type="text" ng-model="home.newAttendee">
-</div>
-<div class="block has-text-centered is-fullwidth">
-  <a class="button is-danger" ng-click="home.addAttendee()">RSVP</a>
+
+<div class="rsvp">
+  <div class="block has-text-centered is-fullwidth" ng-show="!home.inFormMode && !home.isRegistered">
+    <a class="button is-danger" ng-click="home.switchRSVPForm()">RSVP</a>
+  </div>
+
+  <div class="block has-text-centered is-fullwidth" ng-show="home.inFormMode && !home.isRegistered">
+    <div class="block has-text-centered is-fullwidth">
+        <label>First Name: </label>
+        <input type="text" ng-model="home.newAttendee.firstName">
+    </div>
+    <div class="block has-text-centered is-fullwidth">
+        <label>Last Name: </label>
+        <input type="text" ng-model="home.newAttendee.lastName">
+    </div>
+    <div class="block has-text-centered is-fullwidth">
+        <label>Email: </label>
+        <input type="text" ng-model="home.newAttendee.email">
+    </div>
+    <div class="block has-text-centered is-fullwidth">
+      <label class="lable">Arrival Date:</label>
+      <input type="date" min="2017-08-03" max="2017-08-06" ng-model="home.newAttendee.arrivalDate">
+    </div>
+    <div class="block has-text-centered is-fullwidth">
+      <label class="lable">Departure Date:</label>
+      <input type="date" min="2017-08-04" max="2017-08-07" ng-model="home.newAttendee.departureDate">
+    </div>
+    <a class="button is-danger" ng-click="home.addAttendee()">Submit</a>
+    <a class="button" ng-click="home.switchRSVPForm()">Cancel</a>
+  </div>
+  
+  <div class="block has-text-centered is-fullwidth" ng-show="home.isRegistered">
+    <div class="block has-text-centered is-fullwidth">
+        Thanks for the RSVP!
+    </div>
+    <div class="block has-text-centered is-fullwidth">
+        If you have questions or need to update your RSVP, contact Sergji at email.com
+    </div>
+  </div>
 </div>

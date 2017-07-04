@@ -6,3 +6,8 @@ body {
 .hero {
   background-color: rgba(0, 209, 178, 0.4);
 }
+
+.rsvp {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
