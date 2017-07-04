@@ -8,9 +8,9 @@
         Attendee.users = [];
         Attendee.all = attendees;
         
-        Attendee.add = function(userName) {
-            Attendee.users.push(userName);
-            attendees.$add(userName);
+        Attendee.add = function(user) {
+            Attendee.users.push(user);
+            attendees.$add(user);
         }
         
         return Attendee;

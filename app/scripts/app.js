@@ -1,11 +1,11 @@
 (function() {
      function config($locationProvider, $stateProvider) {
-        //  $locationProvider
-        //      .html5Mode({
-        //          enabled: true,
-        //          requireBase: false
-        //       });
- 
+         $locationProvider
+             .html5Mode({
+                 enabled: true,
+                 requireBase: false
+              });
+         
          $stateProvider
              .state('home', {
                  url: '',
@@ -25,6 +25,6 @@
      }
      
      angular
-         .module('ECAtlSite', ['ui.router', 'firebase'])
+         .module('ECAtlSite', ['ui.router', 'firebase', 'ngCookies'])
          .config(config);
  })();
