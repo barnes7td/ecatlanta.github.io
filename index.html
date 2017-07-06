@@ -4,14 +4,27 @@
   <meta charset="UTF-8">
   <title>Bloc Base Project</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-  <nav class="nav">
-    <a class="nav-item" ui-sref="home">Home</a>
-    <!-- <a class="nav-item" ui-sref="schedule">Schedule</a> -->
-    <a class="nav-item" ui-sref="admin">Admin</a>
-  </nav>
+  <div class="hero-head">
+    <header class="nav">
+      <div class="container">
+        <div class="nav-left nav-menu">
+          <a class="nav-item is-active" ui-sref="home">Home</a>
+          <!-- <a class="nav-item" ui-sref="schedule">Schedule</a> -->
+          <!-- <a class="nav-item" ui-sref="admin">Admin</a> -->
+        </div>
+        <span class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+    </header>
+  </div>
+
   <ui-view></ui-view>
   
   <!-- Vendor Files -->
