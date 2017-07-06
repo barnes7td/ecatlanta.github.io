@@ -1,35 +1,19 @@
-
-  <section class="hero is-primary is-large header-image">
-    <!-- <div class="hero-head">
-      <header class="nav">
-        <div class="container">
-          <div class="nav-left nav-menu">
-            <a class="nav-item is-active">
-              Home
-            </a>
-          </div>
-          <span class="nav-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </div>
-      </header>
-    </div> -->
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <h1 class="title">
-          EC Atlanta
-        </h1>
-        <h2 class="subtitle is-5">
-          August 6-8, 2017
-        </h2>
-        <h2 class="subtitle">
-          {{ home.attendees.length }} Signed Up!
-        </h2>
-      </div>
+<section class="hero is-primary is-large header-image">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+        EC Atlanta
+      </h1>
+      <h2 class="subtitle is-5">
+        August 6-8, 2017
+      </h2>
+      <h2 class="subtitle">
+        {{ home.attendees.length }} Signed Up!
+      </h2>
     </div>
-  </section>
+  </div>
+</section>
+  
   <div class="hero-cta">
     <!-- <nav class="level"> -->
       <div class="block has-text-centered is-fullwidth"  ng-show="!home.inFormMode && !home.isRegistered">
@@ -37,7 +21,7 @@
           RSVP and let us know you are coming!
         </div>
         <div class="block has-text-centered is-fullwidth">
-          <a class="button is-primary" ng-click="home.switchRSVPForm()">RSVP</a>
+          <a class="button is-danger" ng-click="home.switchRSVPForm()">RSVP</a>
         </div>
       </div>
             

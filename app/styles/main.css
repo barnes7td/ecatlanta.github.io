@@ -30,7 +30,7 @@ body {
 }
 
 .header-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.49),rgba(0, 0, 0, 0.89)),url('images/country_inn_smyrna.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.26),rgba(0, 0, 0, 0.69)),url('images/country_inn_smyrna.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
