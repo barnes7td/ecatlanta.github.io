@@ -1,35 +1,72 @@
-<h1>Admin</h1>
+<div class="container">
+  <h1>Admin</h1>
+  <br>
 
-<div class="">
-  <label>Friday Total:</label>
-  <span>{{ admin.attendeesPresent('8/4/17') }}</span>
-</div>
-<div class="">
-  <label>Saturday Total:</label>
-  <span>{{ admin.attendeesPresent('8/5/17') }}</span>
-</div>
-<div class="">
-  <label>Sunday Total:</label>
-  <span>{{ admin.attendeesPresent('8/6/17') }}</span>
-</div>
+  <div ng-if="!admin.authenticated">
+    <div class="notification is-warning" ng-if="admin.session.error">
+      The username or password is wrong.
+    </div>
+    
+    <div class="block is-fullwidth">
+      <div class="block is-fullwidth">
+          <label>Username: </label>
+          <input type="text" ng-model="admin.session.username">
+      </div>
+      <div class="block  is-fullwidth">
+          <label>Password: </label>
+          <input type="password" ng-model="admin.session.password">
+      </div>
+      <a class="button is-danger" ng-click="admin.authenticate()">Sign In</a>
+    </div>
+  </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Email</th>
-      <th>Arrival Date</th>
-      <th>Departure Date</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="attendee in admin.attendees">
-      <td>{{ attendee.firstName }}</td>
-      <td>{{ attendee.lastName }}</td>
-      <td>{{ attendee.email }}</td>
-      <td>{{ attendee.arrivalDate | date : 'shortDate' }}</td>
-      <td>{{ attendee.departureDate | date : 'shortDate' }}</td>
-    </tr>
-  </tbody>
-</table>
+  <!-- <div ng-if="admin.authenticated"> -->
+  <div>
+    <div>
+      <label>Thursday Total:</label>
+      <span>{{ admin.attendeesPresent('8/3/17') }}</span>
+    </div>
+    <div>
+      <label>Friday Total:</label>
+      <span>{{ admin.attendeesPresent('8/4/17') }}</span>
+    </div>
+    <div>
+      <label>Saturday Total:</label>
+      <span>{{ admin.attendeesPresent('8/5/17') }}</span>
+    </div>
+    <div>
+      <label>Sunday Total:</label>
+      <span>{{ admin.attendeesPresent('8/6/17') }}</span>
+    </div>
+    <div>
+      <label>Monday Total:</label>
+      <span>{{ admin.attendeesPresent('8/7/17') }}</span>
+    </div>
+    
+    <br>
+    <table>
+      <thead>
+        <tr>
+          <th>Count</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Arrival Date</th>
+          <th>Departure Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="attendee in admin.attendees">
+          <td>{{ $index + 1 }}</td>
+          <td>{{ attendee.firstName }}</td>
+          <td>{{ attendee.lastName }}</td>
+          <td>{{ attendee.email }}</td>
+          <td>{{ attendee.arrivalDate | date : 'shortDate' }}</td>
+          <td>{{ attendee.departureDate | date : 'shortDate' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<br>
+<br>
